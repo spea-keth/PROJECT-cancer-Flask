@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock title %}
+
+
+{% block  content %}
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-4 col-md-4">
+                    <div class="thumbnail">
+                            <img src="/static/images/cancer-body-parts-2.jpg" class="img-thumbnail" >
+
+                        <div class="caption">
+                            <h3>{{cancer.cancer_name }}</h3>
+
+                        </div>
+
+                    </div>
+            <div class="jumbotron">
+               <p> {{cancer.cancer_name }}</p>
+            </div>
+            <a href="/detail/delete/{{ cancer.id }}" class="btn btn-danger">Delete {{ cancer.cancer_name }}</a>
+        </div>
+    </div>
+    </div>
+{% endblock  %}
